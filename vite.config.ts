@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     hmr: {
       overlay: false,
-    },base: "/portfolio.git/",
+    },base: "/portfolio/",
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {

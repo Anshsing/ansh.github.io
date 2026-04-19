@@ -15,7 +15,7 @@ const projects = [
     longDescription:
       "🚀 A React-based Algorithm Visualizer that demonstrates how sorting algorithms work through step-by-step animations. Features real-time comparison counting, color-coded states (active, pivot, sorted), and adjustable speed/size controls for an interactive learning experience. ",
     tech: ["React","JavaScript", "HTML", "CSS"],
-    videoUrl: "/public/demo.mp4",
+    videoUrl: "/portfolio/demo.mp4",
     github: "https://github.com/Anshsing/sorting-visualizer",
     live: "https://algorithm-visualizer-liard-phi.vercel.app/",
   },
@@ -25,7 +25,7 @@ const projects = [
     longDescription:
       "Built a hyperlocal platform to discover clothing from nearby shops with smart filters Managed a group of 5 developers and a survey team in collecting local data and consumerinterest. Developed user and shopkeeper interfaces for browsing, uploading, and managing inventory.",
     tech: ["React","React Native","Tailwind", "Node.js", "Express", "MongoDB"],
-    Image: "/public/_MConverter.eu_localist.mp4",
+    Image: "/portfolio/_MConverter.eu_localist.mp4",
     github: "https://github.com/Anshsing/localist",
     
   },
