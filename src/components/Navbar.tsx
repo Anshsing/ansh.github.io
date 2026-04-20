@@ -20,6 +20,16 @@ const Navbar = () => {
   const navRef = useRef<HTMLElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
 
+const handleScroll = (e, id) => {
+  e.preventDefault();
+  const element = document.getElementById(id.replace('#', ''));
+  if (element) {
+    element.scrollIntoView({ behavior: 'smooth' });
+    // This updates the URL without a 404-triggering reload
+    window.history.pushState(null, null, id);
+  }
+};
+
   useEffect(() => {
     if (navRef.current) {
       gsap.fromTo(navRef.current, { y: -80, opacity: 0 }, { y: 0, opacity: 1, duration: 0.8, ease: "power3.out", delay: 0.2 });
@@ -39,6 +49,7 @@ const Navbar = () => {
             <a
               key={link.link}
               href={link.link}
+              onClick={(e) => handleScroll(e, link.link)}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               {link.label}
@@ -78,7 +89,7 @@ const Navbar = () => {
               </a>
             ))}
           </div>
-        </div>
+        </div>  
       )}
     </nav>
   );
