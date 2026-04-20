@@ -4,14 +4,15 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Moon, Sun, Menu, X } from "lucide-react";
 import { useTheme } from "@/hooks/use-theme";
 import { useState } from "react";
-
+import { HashLink as Link } from 'react-router-hash-link';
+import { link } from "fs";
 gsap.registerPlugin(ScrollTrigger);
 
 const navLinks = [
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Skills", href: "#skills" },
-  { label: "Contact", href: "#contact" },
+  { label: "About", link: "/#about" },
+  { label: "Projects", link: "/#projects" },
+  { label: "Skills", link: "/#skills" },
+  { label: "Contact", link: "/#contact" },
 ];
 
 const Navbar = () => {
@@ -36,8 +37,8 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
-              key={link.href}
-              href={link.href}
+              key={link.link}
+              href={link.link}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               {link.label}
@@ -68,8 +69,8 @@ const Navbar = () => {
           <div className="section-container py-4 flex flex-col gap-3">
             {navLinks.map((link) => (
               <a
-                key={link.href}
-                href={link.href}
+                key={link.link}
+                href={link.link}
                 onClick={() => setMobileOpen(false)}
                 className="text-sm font-medium text-muted-foreground hover:text-foreground py-2"
               >
